@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  snippetbox:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DATABASE_URL=sqlite+aiosqlite:///./data/snippetbox.db
+      - LOG_LEVEL=INFO
+      - LOG_FORMAT=json
+      - RATE_LIMIT_ENABLED=true
+      - RATE_LIMIT_PER_MINUTE=60
+      - CORS_ENABLED=true
+      - CORS_ORIGINS=*
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
