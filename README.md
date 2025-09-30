@@ -1,5 +1,10 @@
 # SnippetBox - Online Code Snippet Service
 
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Tests](https://img.shields.io/badge/tests-20%20passed-brightgreen.svg)
+
 RESTful API service for managing code snippets with full-text search, tagging, and rate limiting.
 
 ## Features
